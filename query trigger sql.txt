@@ -1,0 +1,1 @@
+CREATE TRIGGER jual AFTER INSERT ON tb_penjualan FOR EACH ROW BEGIN UPDATE tb_barang SET stock = stock - NEW.jumlah WHERE kode_barcode = NEW.kode_barcode; END
